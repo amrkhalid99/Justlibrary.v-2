@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Join Our Community.</title>
+    <link rel="stylesheet" href="../Sass/reg.css">
+    <link rel="stylesheet" href="../Sass/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../Sass/all.min.css">
+</head>
+
+<body class="">
+    <main class="main-box container">
+        <section class="row main-section mt-5">
+            <article class="left-box col-xxl-6">
+                <div class="left-header mb-sm-5">
+                    <h2>Just Library</h2>
+                    <div>
+                        <!-- <button class="mood">mood</button> -->
+                        <a href=""><i class="fas fa-arrow-left"></i>Back to Website</a>
+                    </div>
+                </div>
+                <div class="left-footer mt-sm-5">
+                    <h2>Explore unlimited books and enhance your learning journey.</h2>
+                    <h4>Personalized recommendations, exclusive deals, and a vibrant community for book lovers.</h4>
+                </div>
+            </article>
+
+
+            <article class="right-box col-xxl-6">
+                <div class="right-header">
+                    <h2>Registration</h2>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>Choose Your Book, Choose the idea.</h3>
+                        <button class="mood">Light Mood</button>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <label for="text">User Name</label>
+                    <input type="text" name="" id="user" placeholder="Your Pretty Name">
+                    <div class="d-flex justify-content-between">
+                        <label for="password">Password</label>
+                        <button id="pass-btn">Show Password</button>
+                    </div>
+                    <input type="password" name="" id="pass" placeholder="Your Passowrd">
+                    <label for="">Email</label>
+                    <input type="email" name="" id="" placeholder="email@mail.com">
+                    <label for="date">Date of Birth</label>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="check">
+                    <div class="d-inline mb-3">
+                        <div class="mb-3 gender">
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">FeMale</label>
+                        </div>
+                        <input type="checkbox" name="" id="checkbox"><label for="checkbox"> I Accept terms and
+                            condtions</label>
+                    </div>
+                    <!-- <a href="">Forget Password?</a> -->
+                </div>
+                <div class="login">
+                    <button><i class="fas fa-user"></i> Create Account</button>
+                    <div>
+                        <h4>ــــ Or Login with ــــ</h4>
+                        <div class="face"><button><i class="fab fa-facebook"></i> Continue with Facebook</button></div>
+                        <div class="insta"><button><i class="fab fa-instagram"></i> Continue with Instagram</button>
+                        </div>
+                        <div class="goo"><button><i class="fab fa-google"></i> Continue with Google</button></div>
+                    </div>
+                </div>
+                <div class="right-footer">
+                    <h3>Have an account? <a href="login.html">Log in here</a></h3>
+                </div>
+            </article>
+
+
+        </section>
+    </main>
+</body>
+<script src="../Sass/all.min.js"></script>
+<script>
+
+    const mood = document.querySelector(".mood")
+    mood.addEventListener("click", LmoodD)
+    function LmoodD() {
+        document.body.classList.toggle("dark")
+        if (mood.textContent === "Light Mood") {
+            mood.textContent = "Dark Mood"
+        } else {
+            mood.textContent = "Light Mood"
+        }
+    }
+
+    const pass = document.getElementById("pass-btn");
+    pass.addEventListener("click", show)
+    function show() {
+        const inp = document.getElementById("pass")
+        if (inp.type === "password") {
+            inp.type = "text"
+            pass.textContent = "Hide Passowrd"
+        } else {
+            inp.type = "password"
+            pass.textContent = "Show Passowrd"
+        }
+    }
+
+
+
+</script>
+
+
+
+</html>
